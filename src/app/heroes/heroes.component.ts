@@ -9,9 +9,9 @@ import { HeroService } from '../services/hero-service/hero.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  heroes: Hero[];
-  selectedHero: Hero;
+  static routeName: string = 'heroes';
 
+  heroes: Hero[];
 
   constructor(private heroService: HeroService) { }
 
@@ -19,7 +19,4 @@ export class HeroesComponent implements OnInit {
     this.heroService.fetchHeroes().subscribe(heroes => this.heroes = heroes);
   }
 
-  onSelect(hero: Hero) {
-    this.selectedHero = hero;
-  }
 }

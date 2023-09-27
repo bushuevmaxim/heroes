@@ -16,4 +16,9 @@ export class HeroService {
     this.messageService.send('Hero Service: fetch heroes method call');
     return of(HEROES);
   }
+  fetchHeroByID(id: number): Observable<Hero> {
+    this.messageService.send(`Hero Service: fetch hero by ${id} method call`);
+    return of(HEROES.find(hero => hero.id === id)!);
+  }
+
 }
