@@ -65,3 +65,12 @@
 .heroes a {
     text-decoration: none;
 }
+
+
+button.delete {
+    position: relative;
+    left: 194px;
+    top: -32px;
+    background-color: rgb(174, 105, 237) !important;
+    color: white;
+}

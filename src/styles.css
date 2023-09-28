@@ -29,3 +29,18 @@ button {
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
+button {
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(174, 105, 237);
+}
