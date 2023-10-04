@@ -1,22 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Game } from 'src/app/services/game-service/models/game'
 import { GameService } from '../services/game-service/game.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.css']
 })
-export class GamesComponent implements OnInit {
+export class GamesComponent implements OnInit, OnDestroy {
   static routeName: string = 'games';
 
   games: Game[];
+  gamesSub: Subscription;
 
   constructor(private gameService: GameService) { }
 
   ngOnInit() {
-    this.gameService.fetchGames().subscribe(games => this.games = games);
+    this.gamesSub = this.gameService.fetchGames().subscribe(games => this.games = games);
+
   }
   add(name: string): void {
     name = name.trim();
@@ -30,4 +33,8 @@ export class GamesComponent implements OnInit {
     this.games = this.games.filter(h => h !== game);
     this.gameService.deleteGame(game).subscribe();
   }
+  ngOnDestroy(): void {
+    this.gamesSub.unsubscribe();
+  }
+
 }
