@@ -1,4 +1,4 @@
-export class Hero {
+export class Game {
     id: number;
     name: string;
     constructor(id: number, name: string,) {
@@ -7,7 +7,7 @@ export class Hero {
     }
 }
 
-export const HEROES: Hero[] = [
+export const GAMES: Game[] = [
     { id: 0, name: 'Volverine' },
     { id: 1, name: 'Thanos' },
     { id: 2, name: 'Spider-Man' },

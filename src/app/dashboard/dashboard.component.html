@@ -1,12 +1,12 @@
-<h3>Top heroes</h3>
+<h3>Top games</h3>
 <div class="grid grid-pad">
-    <a *ngFor="let hero of heroes" class='row-1-4' routerLink="/detail/{{hero.id}}">
+    <a *ngFor="let game of games" class='row-1-4' routerLink="/detail/{{game.id}}">
 
-        <div class='module hero'>
-            <h4>{{hero.name}}</h4>
+        <div class='module game'>
+            <h4>{{game.name}}</h4>
         </div>
     </a>
 
 </div>
 
-<app-hero-search></app-hero-search>
+<app-game-search></app-game-search>
