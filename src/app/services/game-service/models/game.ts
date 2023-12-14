@@ -1,17 +1,14 @@
 export class Game {
     id: number;
     name: string;
-    constructor(id: number, name: string,) {
+    isViolence: boolean;
+    genres: Array<String>
+    price: number;
+    constructor(id: number, name: string, isViolence: boolean, genres: Array<String>, price: number) {
         this.id = id;
         this.name = name;
+        this.isViolence = isViolence;
+        this.genres = genres;
+        this.price = price;
     }
 }
-
-export const GAMES: Game[] = [
-    { id: 0, name: 'Volverine' },
-    { id: 1, name: 'Thanos' },
-    { id: 2, name: 'Spider-Man' },
-    { id: 3, name: 'Hulk' },
-    { id: 4, name: 'Doctor Doom' },
-    { id: 5, name: 'Iron Man' },
-]

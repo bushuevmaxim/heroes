@@ -11,6 +11,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data/in-memory-data.service';
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import { GameSearchComponent } from './game-search/game-search.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GameSearchComponent } from './game-search/game-search.component';
     GameDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    GameSearchComponent
+    GameSearchComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
