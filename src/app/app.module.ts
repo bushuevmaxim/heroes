@@ -12,6 +12,9 @@ import { InMemoryDataService } from './services/in-memory-data/in-memory-data.se
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import { GameSearchComponent } from './game-search/game-search.component';
 import { FilterComponent } from './filter/filter.component';
+import { FilterGamesPipe } from './filter/pipe-filter/pipe-filter';
+import { HeaderComponent } from './header/header.component';
+import { GameCardComponent } from './game-card/game-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { FilterComponent } from './filter/filter.component';
     MessagesComponent,
     DashboardComponent,
     GameSearchComponent,
-    FilterComponent
+    FilterComponent,
+    FilterGamesPipe,
+    HeaderComponent,
+    GameCardComponent
   ],
   imports: [
     BrowserModule,

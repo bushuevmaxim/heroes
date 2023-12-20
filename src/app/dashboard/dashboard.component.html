@@ -1,14 +1,13 @@
-<h3>Top games</h3>
-
-<app-filter></app-filter>
-<div class="grid grid-pad">
-    <a *ngFor="let game of games" class='row-1-4' routerLink="/detail/{{game.id}}">
-
-        <div class='module game'>
-            <h4>{{game.name}}</h4>
-        </div>
-    </a>
-
-</div>
-
+<h3>Лидеры продаж</h3>
 <app-game-search></app-game-search>
+
+<div class="content">
+    <app-filter (changed)="filtersChanged($event)"> </app-filter>
+
+    <div class="grid grid-pad">
+        <a *ngFor="let game of games$ | async | filterGames:args " class='row-2-4' routerLink="/detail/{{game.id}}">
+            <app-game-card [game]="game"></app-game-card>
+        </a>
+
+    </div>
+</div>

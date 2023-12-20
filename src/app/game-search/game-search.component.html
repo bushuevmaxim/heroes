@@ -1,12 +1,13 @@
-<div id="search-component">
-    <h4>Game Search</h4>
+<div class="search-component">
+    <h4 class="title">Найти игру</h4>
 
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="Например, Need For Speed" />
 
     <ul class="search-result">
         <li *ngFor="let game of games$ | async">
             <a routerLink="/detail/{{game.id}}">
                 {{game.name}}
+
             </a>
         </li>
     </ul>

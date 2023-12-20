@@ -39,6 +39,8 @@
 
 .price_input input {
     margin: 5px;
+    border-radius: 4px;
+    border: #eee;
 }
 
 .price_input {
@@ -47,4 +49,9 @@
     justify-content: space-around;
 
 
+}
+
+.filter_btn {
+    margin: 10px 10px 10px 0px;
+    width: 100%
 }
