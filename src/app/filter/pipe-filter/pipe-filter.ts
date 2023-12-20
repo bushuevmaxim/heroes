@@ -23,15 +23,15 @@ export class FilterGamesPipe implements PipeTransform {
             minPrice = 0;
         }
         if (maxPrice === undefined) {
-            maxPrice = Infinity;
+            maxPrice = 999999;
         }
         console.log('med FilterGamesPipe');
         filterGames = games.filter(game => minPrice <= game.price && game.price <= maxPrice);
         if (genres.length != 0) {
-            filterGames = games.filter(game => game.genres.some(genre => genres.includes(genre)));
+            filterGames = filterGames.filter(game => game.genres.some(genre => genres.includes(genre)));
         }
         if (hideAlult) {
-            filterGames = games.filter(game => game.isViolence != hideAlult);
+            filterGames = filterGames.filter(game => game.isViolence != hideAlult);
 
         }
 
