@@ -14,6 +14,7 @@ export class FilterComponent {
     { label: 'Шутер', checked: false },
     { label: 'Бесплатно', checked: false },
     { label: 'MOBA', checked: false }, { label: 'Гонки', checked: false },
+    { label: 'Файтинг', checked: false }
   ];
 
   minPrice: number | undefined;
